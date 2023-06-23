@@ -23,39 +23,35 @@
 const firstNum = randomNumber(1,10);
 console.log('firstNum', firstNum, typeof firstNum);
 const firstCont = document.getElementById('first');
-firstCont.innerHTML = firstNum;
+firstCont.append(firstNum);
 
 const secondNum = randomNumber(1,10);
 console.log('secondNum', secondNum, typeof secondNum);
 const secondCont = document.getElementById('second');
-secondCont.innerHTML = secondNum;
+secondCont.append(secondNum);
 
 const thirdNum = randomNumber(1,10);
 console.log('thirdNum', thirdNum, typeof thirdNum);
 const thirdCont = document.getElementById('third');
-thirdCont.innerHTML = thirdNum;
+thirdCont.append(thirdNum);
 
 const fourthNum = randomNumber(1,10);
 console.log('fourthNum', fourthNum, typeof fourthNum);
 const fourthCont = document.getElementById('fourth');
-fourthCont.innerHTML = fourthNum;
+fourthCont.append(fourthNum);
 
 const fifthNum = randomNumber(1,10);
 console.log('fifthNum', fifthNum, typeof fifthNum);
 const fifthCont = document.getElementById('fifth');
-fifthCont.innerHTML = fifthNum;
+fifthCont.append(fifthNum);
+
+//------------------------------------------------------------------------
 
 const randomNumbers = [firstNum, secondNum, thirdNum, fourthNum, fifthNum];
 
 console.log('numeri randomici', randomNumbers);
 
 const numbersCont = [firstCont, secondCont, thirdCont, fourthCont, fifthCont];
-
-
-
-
-
-
 
 
 // FUNCTIONS
@@ -74,10 +70,21 @@ setTimeout(
         }
 
         let userFirstNum = parseInt(prompt('Inserisci il primo numero che hai visto'));
+        const userFirstNumCont = document.getElementById('userFirstNumAns');
+
         let userSecondNum = parseInt(prompt('Inserisci il secondo numero che hai visto'));
+        const userSecondNumCont = document.getElementById('userSecondNumAns');
+
         let userThirdNum = parseInt(prompt('Inserisci il terzo numero che hai visto'));
+        const userThirdNumCont = document.getElementById('userThirdNumAns');
+
         let userFourthNum = parseInt(prompt('Inserisci il quarto numero che hai visto'));
+        const userFourthNumCont = document.getElementById('userFourthNumAns');
+
         let userFifthNum = parseInt(prompt('Inserisci il quinto numero che hai visto'));
+        const userFifthNumCont = document.getElementById('userFifthNumAns');
+
+        const userAnswer = [userFirstNumCont, userSecondNumCont, userThirdNumCont, userFourthNumCont, userFifthNumCont]
 
         console.log('userFirstNum', userFirstNum,
                     'userSecondNum', userSecondNum,
@@ -88,20 +95,27 @@ setTimeout(
         const userNumbers = [userFirstNum, userSecondNum, userThirdNum, userFourthNum, userFifthNum];
         console.log('Numeri inseriti dall utente', userNumbers)
 
-        // for (let i = 0; i < randomNumbers.length; i++) {
+        for (let i = 0; i < randomNumbers.length; i++) {
             
-        //     if (randomNumbers[i] == userNumbers[i]){
-        //         userNumbers[i].classList.add('')
-        //     }
-        // }
-    
-        const displayUserNum = document.getElementById('userNumbers');
-        displayUserNum.innerHTML = userNumbers;
+            if(randomNumbers[i] !== userNumbers[i]){
+                console.log('wrong number', randomNumbers[i]);
+                userAnswer[i].classList.add('wrong-numbers');
+                
+            }
+            else if(randomNumbers[i] == userNumbers[i]){
+                console.log('right number', randomNumbers[i]);
+                userAnswer[i].classList.add('right-numbers');
+            }
+        }
 
         const displayRandomNum = document.getElementById('pcNumbers');
-        displayRandomNum.innerHTML = randomNumbers;
-        
+        displayRandomNum.append(randomNumbers);
 
+        userFirstNumCont.append(userFirstNum);
+        userSecondNumCont.append(userSecondNum);
+        userThirdNumCont.append(userThirdNum);
+        userFourthNumCont.append(userFourthNum);
+        userFifthNumCont.append(userFifthNum);
     },
 5000);
 

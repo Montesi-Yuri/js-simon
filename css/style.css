@@ -9,4 +9,18 @@ GENERAL
     margin-bottom: 10px;
 }
 
+.wrong-numbers{
+    text-decoration: underline red;
+    background-color: red;
+}
 
+.right-numbers{
+    text-decoration: underline green;
+    background-color: green;
+}
+
+
+#userNumbers > span{
+    padding: 10px;
+    border-radius: 5px;
+}
