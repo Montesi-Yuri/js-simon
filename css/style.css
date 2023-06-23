@@ -2,6 +2,14 @@
 GENERAL
 */
 
+.my-container{
+    background-image: url('../img/workRID3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 100vh;
+}
+
 .singleNum{
     text-align: center;
     padding: 10px;
@@ -10,17 +18,29 @@ GENERAL
 }
 
 .wrong-numbers{
-    text-decoration: underline red;
     background-color: red;
 }
 
 .right-numbers{
-    text-decoration: underline green;
     background-color: green;
 }
 
 
 #userNumbers > span{
-    padding: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.white-bg-blur{
+    background-color: rgba(255, 255, 255, 0.437);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.grey-bg-blur{
+    background-color: rgba(134, 132, 132, 0.437);
+    padding: 5px;
     border-radius: 5px;
 }

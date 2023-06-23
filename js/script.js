@@ -53,6 +53,8 @@ console.log('numeri randomici', randomNumbers);
 
 const numbersCont = [firstCont, secondCont, thirdCont, fourthCont, fifthCont];
 
+const rightNumbers = document.getElementById('chosenOnes');
+
 
 // FUNCTIONS
 
@@ -63,12 +65,9 @@ function randomNumber(min, max) {
 setTimeout(
     function(){
         
-        for (let i = 0; i < randomNumbers.length; i++) {
-
-            console.log(randomNumbers[i]);
-            numbersCont[i].classList.add('d-none');
-        }
-
+        if (rightNumbers.className)
+        rightNumbers.classList.add('d-none');
+       
         let userFirstNum = parseInt(prompt('Inserisci il primo numero che hai visto'));
         const userFirstNumCont = document.getElementById('userFirstNumAns');
 

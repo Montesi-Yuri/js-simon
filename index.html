@@ -26,77 +26,97 @@
 
     <body>
 
-        <!-- Header -->
-        <header>
+        <div class="my-container">
 
-            <h1 class="text-center mb-5">Guess the correct order of numbers</h1>
+            <!-- Header -->
+            <header class="text-center">
 
-        </header>
-        
-        <!-- Main -->
-        <main>
+                <h1 class="text-center mb-5 white-bg-blur d-inline-block">
+                    Guess the correct order of numbers
+                </h1>
 
-            <div class="container">
+            </header>
+            
+            <!-- Main -->
+            <main>
 
-                <div id="first" class="singleNum">
+                <div class="container d-flex flex-wrap">
 
+                    <!-- RANDOM NUMBERS -->
+                    <div id="chosenOnes" class="w-100">
+                        <div id="first" class="singleNum grey-bg-blur fw-bold fs-3">
+
+                        </div>
+    
+                        <div id="second" class="singleNum grey-bg-blur fw-bold fs-3">
+    
+                        </div>
+    
+                        <div id="third" class="singleNum grey-bg-blur fw-bold fs-3">
+    
+                        </div>
+    
+                        <div id="fourth" class="singleNum grey-bg-blur fw-bold fs-3">
+    
+                        </div>
+    
+                        <div id="fifth" class="singleNum grey-bg-blur fw-bold fs-3">
+    
+                        </div>
+                    </div>
+
+                    <!-- CORRECT NUMBERS -->
+                    <div class="w-50 mt-3 border border-black rounded grey-bg-blur">
+                        <div class="text-center">
+
+                            <h3 class="white-bg-blur">
+                                The correct numbers: 
+                            </h3>
+    
+                            <div id="pcNumbers" class="fs-3 fw-bold"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- USER NUMBERS -->
+                    <div class="w-50 mt-3 border border-black rounded grey-bg-blur">
+                        <div id="userNumbers" class="text-center ">
+
+                            <h3 class="text-center white-bg-blur">Your numbers</h3>
+    
+                            <span id="userFirstNumAns">
+    
+                            </span>
+    
+                            <span id="userSecondNumAns">
+    
+                            </span>
+    
+                            <span id="userThirdNumAns">
+    
+                            </span>
+    
+                            <span id="userFourthNumAns">
+    
+                            </span>
+    
+                            <span id="userFifthNumAns">
+    
+                            </span>
+    
+                            <p class="text-center mt-3 text-success">Green = Correct </p>
+    
+                            <p class="text-center text-danger">Red = Wrong </p>
+    
+                        </div>
+    
+                    </div>
+                    
                 </div>
+                
+            </main>
 
-                <div id="second" class="singleNum">
-
-                </div>
-
-                <div id="third" class="singleNum">
-
-                </div>
-
-                <div id="fourth" class="singleNum">
-
-                </div>
-
-                <div id="fifth" class="singleNum">
-
-                </div>
-
-                <div id="pcNumbers" class="text-center">
-                    The correct numbers: 
-                </div>
-
-                <div id="userNumbers" class="text-center mt-3">
-
-                    <h3 class="text-center">Your Numbers</h3>
-
-                    <span id="userFirstNumAns">
-
-                    </span>
-
-                    <span id="userSecondNumAns">
-
-                    </span>
-
-                    <span id="userThirdNumAns">
-
-                    </span>
-
-                    <span id="userFourthNumAns">
-
-                    </span>
-
-                    <span id="userFifthNumAns">
-
-                    </span>
-
-                    <p class="text-center mt-3">Green = Correct </p>
-
-                    <p class="text-center">Red = Wrong </p>
-
-                </div>
-
-            </div>
-
-
-
-        </main>
+        </div>
 
         <!-- BS JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
