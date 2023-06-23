@@ -22,19 +22,23 @@
 
 const firstNum = randomNumber(1,10);
 console.log('firstNum', firstNum, typeof firstNum);
+const firstCont = document.getElementById('first');
 
 const secondNum = randomNumber(1,10);
 console.log('secondNum', secondNum, typeof secondNum);
+const secondCont = document.getElementById('second');
 
 const thirdNum = randomNumber(1,10);
 console.log('thirdNum', thirdNum, typeof thirdNum);
+const thirdCont = document.getElementById('third');
 
 const fourthNum = randomNumber(1,10);
 console.log('fourthNum', fourthNum, typeof fourthNum);
+const fourthCont = document.getElementById('fourth');
 
 const fifthNum = randomNumber(1,10);
 console.log('fifthNum', fifthNum, typeof fifthNum);
-
+const fifthCont = document.getElementById('fifth');
 
 
 
