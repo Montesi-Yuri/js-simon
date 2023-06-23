@@ -16,3 +16,39 @@
     10- Inserisco le array a confronto nell'html
         SE in ordine crescente un numero dell'array dell'utente corrisponde all'array dei numeri casuali gli viene data una classe
         ALRIMENTI gli viene data un altra classe
+*/
+
+// VARIABLES
+
+const firstNum = randomNumber(1,10);
+console.log('firstNum', firstNum, typeof firstNum);
+
+const secondNum = randomNumber(1,10);
+console.log('secondNum', secondNum, typeof secondNum);
+
+const thirdNum = randomNumber(1,10);
+console.log('thirdNum', thirdNum, typeof thirdNum);
+
+const fourthNum = randomNumber(1,10);
+console.log('fourthNum', fourthNum, typeof fourthNum);
+
+const fifthNum = randomNumber(1,10);
+console.log('fifthNum', fifthNum, typeof fifthNum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FUNCTIONS
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
